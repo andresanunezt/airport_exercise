@@ -1,13 +1,11 @@
 class Bag {
-	constructor(tag){
+	constructor(tag, passenger){
 		this.tag = tag,
-        this.passenger = origin
+        this.passenger = passenger
         
 	}
 
-	addPassenger(person){
-		this.passengers.push(person)
-	}
+	
 }
 
 module.exports = Bag

@@ -1,8 +1,9 @@
 class Plane {
-	constructor(flightNumber, origin,destination){
+	constructor(flightNumber, origin,destination, airline){
 		this.flightNumber = flightNumber,
         this.origin = origin,
         this.destination = destination,
+        this.airline = airline,
 		this.passengers = []
         this.pilots = []
 	}
@@ -14,11 +15,16 @@ class Plane {
 	}
 
 
-    addPassenger(person){
+    boardPlane(person){
 		
         if (person.role == "Pilot"){
 
-            this.pilots.length.push(person)
+            this.pilots.push(person)
+        }
+
+        if (person.role == "Passenger") {
+
+            this.passengers.push(person)
         }
 
         

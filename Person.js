@@ -15,13 +15,13 @@ class Person {
       
 	}
 
-	buyTicket(ticket){
+	getTicket(ticket){
 		this.tickets.push(ticket)
 	}
 
     addBag(bag){
 
-        this.bags.push = bag
+        this.bags.push(bag)
     }
 
 
