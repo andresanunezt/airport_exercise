@@ -1,8 +1,8 @@
 class Airport {
-	constructor(name, location, terminals){
+	constructor(name, location){
 		this.name = name,
         this.location = location,
-        this.terminals = terminals
+        this.terminals = []
         
 	}
 

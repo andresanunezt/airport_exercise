@@ -17,12 +17,23 @@ const Person = require('./Person')
         expect(passenger0).toHaveProperty('bags');
     }) 
 
+    test('has passport property', () => {
+        expect(passenger0).toHaveProperty('passport');
+    }) 
+
     test('can add a bag', () => {
         expect(passenger0.bags.length).toBeGreaterThan(0);
     }) 
 
-    test('can buy ticket', () => {
+    test('can get a ticket', () => {
         expect(passenger1.tickets.length).toBeGreaterThan(0);
+    })
+
+    
+
+    test('either a passanger or a pilot', () => {
+        expect(passenger0.role).toBe('Passenger');
+        expect(pilot1.role).toBe('Pilot');
     })
 
     

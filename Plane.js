@@ -10,9 +10,6 @@ class Plane {
 
 
 
-	addPassenger(person){
-		this.passengers.push(person)
-	}
 
 
     boardPlane(person){

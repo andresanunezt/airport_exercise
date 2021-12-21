@@ -16,9 +16,20 @@ describe('Plane Class', () => {
     })
     
     console.log(peopleArray)
-    console.log()
 
-    test('going to nyc', () => {
+    test('have a pilots array', () => {
+        expect(Array.isArray(plane1.pilots)).toBeTruthy();
+        
+    
+    })
+
+    test('have a passengers array', () => {
+        expect(Array.isArray(plane1.passengers)).toBeTruthy();
+        
+    
+    })
+
+    test('Leaving from Miami', () => {
         expect(plane1.origin).toBe("Miami")
     }) 
 
