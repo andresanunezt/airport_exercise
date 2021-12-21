@@ -1,5 +1,5 @@
 class Bag {
-	constructor(tag, passenger,checked){
+	constructor(tag, passenger,checked, weight){
 		this.tag = tag,
         this.passenger = passenger
 		if (checked == true){
@@ -9,6 +9,13 @@ class Bag {
 		else if (checked == false) {
 			this.checked = false,
 			this.carryOn = true
+		}
+
+		
+		if (weight < 51){
+			this.fee = "Regular"
+		}	else if (weight > 51) {
+			this.fee = "Extra"
 		}
         
 	}

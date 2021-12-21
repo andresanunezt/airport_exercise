@@ -15,7 +15,13 @@ describe('Plane Class', () => {
         plane1.boardPlane(person)
     })
     
-    console.log(peopleArray)
+
+    test('have a pilots array', () => {
+        expect(typeof plane1.flightNumber).toBe("number");
+        
+    
+    })
+   
 
     test('have a pilots array', () => {
         expect(Array.isArray(plane1.pilots)).toBeTruthy();
