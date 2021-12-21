@@ -7,9 +7,24 @@ class Plane {
         this.pilots = []
 	}
 
+
+
 	addPassenger(person){
 		this.passengers.push(person)
 	}
+
+
+    addPassenger(person){
+		
+        if (person.role == "Pilot"){
+
+            this.pilots.length.push(person)
+        }
+
+        
+	}
 }
+
+
 
 module.exports = Plane
