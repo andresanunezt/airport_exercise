@@ -1,8 +1,8 @@
 
 const Bag = require('./Bag')
 
-const bag1 = new Bag(Math.random(), "Andres", false, 56)
-const bag2 = new Bag(Math.random(), "Andres", true, 49)
+const bag1 = new Bag(Math.random(), "Andres", false, 20)
+const bag2 = new Bag(Math.random(), "Andres", true, 52)
 describe('Bag Class', () => {
 
     test('is either checked or carry on',() => {
@@ -23,8 +23,8 @@ describe('Bag Class', () => {
 
         test('Regular fee or extra fee',() => {
 
-            expect(bag1.fee).toBe("Extra")
-            expect(bag2.fee).toBe("Regular")
+            expect(bag2.fee).toBe("Extra")
+            expect(bag1.fee).toBe("Regular")
             
             })
 
