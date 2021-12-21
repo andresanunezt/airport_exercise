@@ -1,5 +1,5 @@
 class Plane {
-	constructor(flightNumber, origin,){
+	constructor(flightNumber, origin,destination){
 		this.flightNumber = flightNumber,
         this.origin = origin,
         this.destination = destination,
