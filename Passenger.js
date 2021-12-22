@@ -5,12 +5,11 @@ class Passenger extends Person {
     constructor(name, seatNumber) {
             super(name)
 
-            this.passport = Math.random()
+            this.passport = "American",
+            this.seatNumber = seatNumber,
             this.tickets = []
-            this.seatNumber
 
-
-            Person.all.push(this)
+            
 
 
     }

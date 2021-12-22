@@ -4,9 +4,9 @@ class Plane {
         this.origin = origin,
         this.destination = destination,
         this.airline = airline,
-        this.crew = [],
+        this.crew = {pilots: [], flightAttendants: []},
 		this.passengers = []
-        this.pilots = []
+        
 	}
 
 
@@ -15,12 +15,17 @@ class Plane {
 
     boardPlane(person){
 		
-        if (person.role == "Pilot"){
+        if (person.role === "Pilot"){
 
-            this.pilots.push(person)
+            this.crew.pilots.push(person)
+            
+        }  if (person.role === "Flight Attendant"){
+
+            this.crew.flightAttendants.push(person)
+
         }
 
-        if (person.role == "Passenger") {
+        if (person.role === "Passenger") {
 
             this.passengers.push(person)
         }

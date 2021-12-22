@@ -8,6 +8,7 @@ describe('Plane Class', () => {
     const passenger1 = new Person("Dan", "Passenger", "American")
     const pilot1 = new Person("Jeff", "Pilot", "American")
     const pilot2 = new Person("Jin", "Pilot", "American")
+    const flightAttendant = new Person("Diana", "Flight Attendant", "American")
     const peopleArray = Person.all
 
     console.log(peopleArray)
@@ -25,7 +26,13 @@ describe('Plane Class', () => {
    
 
     test('have a pilots array', () => {
-        expect(Array.isArray(planeToTest.pilots)).toBeTruthy();
+        expect(Array.isArray(planeToTest.crew.pilots)).toBeTruthy();
+        
+    
+    })
+
+    test('have flight attendants array', () => {
+        expect(Array.isArray(planeToTest.crew.flightAttendants)).toBeTruthy();
         
     
     })
@@ -42,21 +49,10 @@ describe('Plane Class', () => {
 
     test('going to nyc', () => {
         expect(planeToTest.destination).toBe("New York City")
+
+
+
     }) 
-
-    test('boardPlane method adds passanger to passenger array', () => {
-        
-        expect(planeToTest.passengers.length).toBeGreaterThan(1);
-
-    })
-
-    test('boardPlane method adds pilots to pilots array', () => {
-
-        expect(planeToTest.pilots.length).toBe(2)
-
-
-
-    })
 
 
     test('has crew property', () => {
@@ -66,6 +62,31 @@ describe('Plane Class', () => {
         
 
     })
+
+    test('boardPlane method adds passanger to passenger array', () => {
+        
+        expect(planeToTest.passengers.length).toBeGreaterThan(1);
+
+    })
+
+    test('boardPlane method adds pilots to pilots array', () => {
+
+        expect(planeToTest.crew.pilots.length).toBe(2)
+
+
+
+    })
+
+    test('boardPlane method adds flight attendants to pilots array', () => {
+
+        expect(planeToTest.crew.flightAttendants.length).toBe(1)
+
+
+
+    })
+
+
+    
     
 
     

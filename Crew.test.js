@@ -1,9 +1,10 @@
 const Crew = require("./Crew");
+const Passenger = require("./Passenger");
 const Person = require("./Person")
 
 
 
-console.log(Person.all)
+
 describe('Crew Class',() => {
 
 
@@ -13,12 +14,27 @@ describe('Crew Class',() => {
         
 
 
-        expect(crewMember1 instanceof Person).toBe(true);
+        expect(crewMember1 instanceof Person).toBeTruthy();
+        expect(crewMember1 instanceof Crew).toBeTruthy()
+        expect(crewMember1 instanceof Passenger).toBeFalsy();
     })
     
     test('has a role', () => {
 
         expect(crewMember1).toHaveProperty('role')
+
+    })
+
+
+    test('can say they work there', () => {
+
+        expect(crewMember1.workHere()).toBe('I work here...')
+
+    })
+
+    test('can say they work there', () => {
+
+        expect(crewMember1.workHere()).toBe('I work here...')
 
     })
 

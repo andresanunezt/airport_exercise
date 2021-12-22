@@ -4,10 +4,16 @@ class Crew extends Person {
 
 constructor(name, role){
  
-    super(name)
+    super(name), 
     this.role = role
 
-    Crew.all.push(this)
+    
+
+}
+
+workHere() {
+
+return 'I work here...'
 
 }
 
