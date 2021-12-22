@@ -9,6 +9,7 @@ const Person = require('./Person')
     passenger0.addBag("The Louis")
     passenger1.getTicket("Ticket")
 
+    
 
     describe('Person Class', () => {
 

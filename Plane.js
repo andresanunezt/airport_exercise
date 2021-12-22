@@ -4,6 +4,7 @@ class Plane {
         this.origin = origin,
         this.destination = destination,
         this.airline = airline,
+        this.crew = [],
 		this.passengers = []
         this.pilots = []
 	}
